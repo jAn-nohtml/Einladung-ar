@@ -10,10 +10,13 @@
 </head>
 <body>
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
-    <!-- Definieren Sie einen Marker, um den Text anzupinnen -->
-    <a-marker preset='hiro'>
-      <a-text value="Willkommen zur Feier!" position='0 0.5 0' rotation='0 0 0' color='#FFFFFF'></a-text>
-    </a-marker>
+    <!-- Der Text ist direkt vor der Kamera fixiert -->
+    <a-entity position="0 0 -2" geometry="primitive: plane; height: auto; width: auto"
+              material="shader: standard; color: white; emissive: cyan; emissiveIntensity: 0.9;">
+      <a-text value="Willkommen zur Feier!" align="center" color="#FFFFFF"
+              position="0 0 0.1" width="4" font="kelsonsans" 
+              animation="property: material.color; to: #FF0000; dur: 1000; easing: easeInOutCubic; loop: true"></a-text>
+    </a-entity>
     <!-- Kamera -->
     <a-entity camera></a-entity>
   </a-scene>
