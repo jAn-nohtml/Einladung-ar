@@ -1,26 +1,14 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AR Einladung</title>
-  <!-- A-Frame und AR.js Skripte einbinden -->
+  <title>Einladung</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
-  <style>
-    body { margin: 0; overflow: hidden; }
-  </style>
+  <script src="https://rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
 </head>
-<body>
-  <!-- A-Frame Szene mit AR.js Konfiguration -->
-  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
-    <!-- Text zentral und leicht vor der Kamera positioniert -->
-    <a-entity position="0 0 -5">
-      <a-text value="Willkommen zur Feier!" align="center" color="#FFFFFF"
-              width="6" font="kelsonsans"></a-text>
-    </a-entity>
-    <!-- Kamera -->
-    <a-entity camera></a-entity>
+<body style='margin: 0; overflow: hidden;'>
+  <a-scene embedded arjs='sourceType: webcam;'>
+    <a-text value="Willkommen zur Feier!" position='0 0.5 -1' rotation='0 0 0' color='#FFFFFF'></a-text>
+    <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
 </body>
 </html>
