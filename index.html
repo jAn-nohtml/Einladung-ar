@@ -29,9 +29,17 @@
 
     <a-scene embedded arjs='sourceType: webcam;'>
       <!-- Define QR code marker -->
-      <a-marker preset='custom' type='pattern' url='path/to/your/marker.patt'>
+      <a-marker preset='custom' type='pattern' url='marker.patt'>
         <a-entity position='0 0 0'>
-          <a-text value='Hallo, dies ist ein AR-Text!' align='center' color='red' position='0 0.5 0'></a-text>
+          <a-text 
+            value='Hallo, dies ist ein AR-Text!' 
+            color='blue' 
+            position='0 1 0' 
+            rotation='0 45 0' 
+            scale='2 2 2' 
+            align='center'
+            font='https://cdn.aframe.io/fonts/Exo2Bold.fnt' 
+          ></a-text>
         </a-entity>
       </a-marker>
 
