@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blauer Würfel</title>
+    <title>AR-Tracking</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
-  <body>
-    <a-scene>
-      <!-- Blauer Würfel -->
-      <a-box color="blue" position="0 1.25 -5" rotation="0 45 0" width="1" height="1" depth="1"></a-box>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- AR-Marker -->
+      <a-marker preset="hiro">
+        <!-- Blauer Würfel -->
+        <a-box color="blue" position="0 0.5 0" rotation="0 45 0" width="1" height="1" depth="1"></a-box>
+      </a-marker>
       
-      <!-- Kamera -->
-      <a-entity camera position="0 1.6 0"></a-entity>
+      <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
