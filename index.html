@@ -1,27 +1,41 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>Einladung ABI 24 test</title>
-  <!-- A-Frame und AR.js Skripte einbinden -->
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
-  <style>
-    body { margin: 0; overflow: hidden; }
-  </style>
-</head>
-<body>
-  <a-scene embedded arjs="sourceType: webcam;">
-    <!-- A-Frame Szene mit AR.js Konfiguration -->
-    <a-marker preset="hiro">
-      <!-- Generierter Code von A-Frame Inspector oder WebAR Studio -->
-      <a-entity position="0 0 0">
-        <a-text value="ABI 24" align="center" color="#FFD700" width="6" position="0 1 0"></a-text>
-        <!-- Beispiel für ein 3D-Objekt -->
-        <a-box color="blue" position="0 0.5 0" rotation="0 45 0" width="1" height="1" depth="1"></a-box>
-      </a-entity>
-    </a-marker>
-    <a-entity camera></a-entity>
-  </a-scene>
-</body>
+<html>
+  <head>
+    <title>WebXR AR.js QR Code Tracking</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: sans-serif;
+      }
+      #info {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info">
+      <p>Scanne den QR-Code auf dem Blattpapier, um den Text in AR zu sehen.</p>
+    </div>
+
+    <a-scene embedded arjs='sourceType: webcam;'>
+      <!-- Define QR code marker -->
+      <a-marker preset='custom' type='pattern' url='path/to/your/marker.patt'>
+        <a-entity position='0 0 0'>
+          <a-text value='Hallo, dies ist ein AR-Text!' align='center' color='red' position='0 0.5 0'></a-text>
+        </a-entity>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
 </html>
