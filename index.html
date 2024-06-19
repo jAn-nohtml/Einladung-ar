@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Einladung ABI 24</title>
+  <title>Einladung ABI 24 test</title>
   <!-- A-Frame und AR.js Skripte einbinden -->
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
@@ -12,11 +12,13 @@
 </head>
 <body>
   <a-scene embedded arjs="sourceType: webcam;">
-  <!-- A-Frame Szene mit AR.js Konfiguration -->
-    <a-marker preset="hiro" type="pattern" url="marker.patt">
+    <!-- A-Frame Szene mit AR.js Konfiguration -->
+    <a-marker preset="hiro">
       <!-- Generierter Code von A-Frame Inspector oder WebAR Studio -->
-      <a-entity position="0 1 -3">
-        <a-text value="ABI 24" align="center" color="#FFD700" width="6" font="kelsonsans"></a-text>
+      <a-entity position="0 0 0">
+        <a-text value="ABI 24" align="center" color="#FFD700" width="6" position="0 1 0"></a-text>
+        <!-- Beispiel für ein 3D-Objekt -->
+        <a-box color="blue" position="0 0.5 0" rotation="0 45 0" width="1" height="1" depth="1"></a-box>
       </a-entity>
     </a-marker>
     <a-entity camera></a-entity>
