@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset0"UTF-8">
-    <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
-    <title>AR-Tracking test1</title>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  </head>
-  <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
-    <a-scene embedded arjs>
-      <!-- AR-Marker -->
-      <a-marker preset="hiro">
-        <!-- Blauer Würfel -->
-        <a-box color="blue" position="0 0.5 0" rotation="0 45 0" width="1" height="1" depth="1"></a-box>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Einladung ABI 24</title>
+  <!-- A-Frame und AR.js Skripte einbinden -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; }
+  </style>
+</head>
+<body>
+  <!-- A-Frame Szene mit AR.js Konfiguration -->
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+    <a-marker preset="hiro">
+      <!-- Generierter Code von A-Frame Inspector oder WebAR Studio -->
+      <a-entity position="0 1 -3">
+        <a-text value="ABI 24" align="center" color="#FFD700" width="6" font="kelsonsans"></a-text>
+      </a-entity>
+      <a-entity position="0 0.5 -3">
+        <a-text value="Darunter einfach abgehen" align="center" color="#FFD700" width="6" font="kelsonsans"></a-text>
+      </a-entity>
+      <a-entity position="0 -1 0">
+        <a-text value="Datum: 24. Juni 2024" align="center" color="#FFFFFF" width="6" font="kelsonsans"></a-text>
+      </a-entity>
+      <a-entity position="0 -1.5 0">
+        <a-text value="Zeit: 18:00 Uhr" align="center" color="#FFFFFF" width="6" font="kelsonsans"></a-text>
+      </a-entity>
+      <a-entity position="0 -2 0">
+        <a-text value="Ort: Schulhof der Muster-Schule" align="center" color="#FFFFFF" width="6" font="kelsonsans"></a-text>
+      </a-entity>
+      <a-entity position="0 -2.5 0">
+        <a-text value="Weitere Informationen: Bringen Sie Ihre gute Laune mit!" align="center" color="#FFFFFF" width="6" font="kelsonsans"></a-text>
+      </a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
 </html>
